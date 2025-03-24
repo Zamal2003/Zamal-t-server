@@ -1,12 +1,16 @@
 {
+  "version": 3,
   "functions": {
-    "api/server.js": {
+    "server.js": {
       "runtime": "nodejs20.x",
       "memory": 1024,
       "maxDuration": 10
     }
   },
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/server.js" }
+    {
+      "source": "/(.*)",
+      "destination": "/server.js"
+    }
   ]
 }
